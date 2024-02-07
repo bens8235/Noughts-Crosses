@@ -1,0 +1,45 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.grid-item {
+  background-color: #846272;
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.winning-boxes {
+  background-color: green;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: monospace;
+  background-color: darkcyan;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.winner {
+  background-color: green;
+  font-size: 2rem;
+}
+
+.draw {
+  background-color: rebeccapurple;
+  font-size: 2rem;
+}
