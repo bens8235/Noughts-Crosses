@@ -1,6 +1,7 @@
 const grid = document.getElementsByClassName("grid-item");
 const player = document.getElementById("player");
 let firstPlayer = true;
+let draw = true;
 let player1Clicks = [];
 let player2Clicks = [];
 winningSequences = [
@@ -42,6 +43,7 @@ for (let i = 0; i < grid.length; i++) {
           currentPlayerClicks.includes(element)
         );
         if (allElementsPresent) {
+          draw = false;
           player.innerText = firstPlayer ? "Player 1 wins!" : "Player 2 wins!";
           player.className = "winner";
           winningSequence.push(winningSequences[j]);
@@ -56,7 +58,7 @@ for (let i = 0; i < grid.length; i++) {
         }
       }
     }
-    if (count === 9) {
+    if (count === 9 && draw === true) {
       player.innerText = "Draw!";
       player.className = "draw";
     }
